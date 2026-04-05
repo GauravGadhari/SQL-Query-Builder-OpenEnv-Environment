@@ -1,7 +1,8 @@
 # 🧠 SQL Query Builder — OpenEnv Environment
 
 > **Train AI agents to write SQL queries against a realistic company database.**  
-> Built for the [Meta PyTorch OpenEnv Hackathon 2026](https://openenv.ai) · **Team Rocket** 🚀
+> Built for the [Meta PyTorch OpenEnv Hackathon 2026](https://www.scaler.com/school-of-technology/meta-pytorch-hackathon) · **Team Rocket** 🚀  
+> 🔗 [GitHub Repository](https://github.com/GauravGadhari/sql-query-env)
 
 ---
 
@@ -419,11 +420,11 @@ async with SqlQueryEnv(base_url="http://localhost:8000") as env:
 
 **Meta PyTorch OpenEnv Hackathon 2026**
 
-| Member | Role |
-|--------|------|
-| **Gaurav Gadhari** | Team Lead |
-| **Gaurav Khokle** | Developer |
-| **Aryan Prakash Bargat** | Developer |
+| Member | Role | Contributions |
+|--------|------|---------------|
+| **[Gaurav Gadhari](https://github.com/GauravGadhari)** | Team Lead · Developer · Architect | Environment design, inference engine, reward system, deployment |
+| **Gaurav Khokle** | Researcher · Developer | Task design, SQL query research, testing & validation |
+| **Aryan Prakash Bargat** | Researcher · Developer | Database schema design, grader logic, documentation |
 
 ---
 
