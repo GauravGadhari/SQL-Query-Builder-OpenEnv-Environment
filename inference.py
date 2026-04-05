@@ -45,10 +45,10 @@ from openai import AsyncOpenAI
 from sql_query_env import SqlQueryAction, SqlQueryEnv
 
 # ── Environment Variables ─────────────────────────────────
-API_KEY = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
+HF_TOKEN = os.getenv("HF_TOKEN")
 API_BASE_URL = os.getenv("API_BASE_URL", "https://router.huggingface.co/v1")
 MODEL_NAME = os.getenv("MODEL_NAME", "Qwen/Qwen2.5-72B-Instruct")
-IMAGE_NAME = os.getenv("IMAGE_NAME")
+LOCAL_IMAGE_NAME = os.getenv("LOCAL_IMAGE_NAME") or os.getenv("IMAGE_NAME")
 
 # ── Constants ─────────────────────────────────────────────
 BENCHMARK = "sql_query_env"
@@ -56,7 +56,7 @@ TASKS = ["simple_lookup", "analytics_query", "complex_report"]
 MAX_STEPS = 5
 
 # ── Async OpenAI Client ───────────────────────────────────
-client = AsyncOpenAI(base_url=API_BASE_URL, api_key=API_KEY)
+client = AsyncOpenAI(base_url=API_BASE_URL, api_key=HF_TOKEN)
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # ANSI Theme System — colors shift by difficulty
