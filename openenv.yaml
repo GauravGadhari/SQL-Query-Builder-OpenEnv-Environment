@@ -1,0 +1,17 @@
+spec_version: 1
+name: sql_query_env
+version: "1.0.0"
+type: space
+runtime: fastapi
+app: server.app:app
+port: 8000
+description: >
+  SQL Query Builder — Train AI agents to write SQL queries against a realistic
+  company database. Features 3 difficulty tiers (simple lookups, analytics queries,
+  complex reports with window functions) and a 5-signal partial reward function.
+  Built for the Meta PyTorch OpenEnv Hackathon 2026.
+tags:
+  - openenv
+  - sql
+  - database
+  - real-world

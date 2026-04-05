@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openenv-sql-query-env"
+version = "1.0.0"
+description = "SQL Query Builder environment for OpenEnv — train AI agents to write SQL queries"
+requires-python = ">=3.10"
+dependencies = [
+    "openenv-core[core]>=0.2.2",
+    "sqlparse>=0.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+]
+inference = [
+    "openai>=1.0.0",
+]
+
+[project.scripts]
+server = "sql_query_env.server.app:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["sql_query_env", "sql_query_env.server"]
+package-dir = { "sql_query_env" = ".", "sql_query_env.server" = "server" }

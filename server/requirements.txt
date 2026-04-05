@@ -1,0 +1,2 @@
+openenv-core>=0.2.2
+sqlparse>=0.5.0
