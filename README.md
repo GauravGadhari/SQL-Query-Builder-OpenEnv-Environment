@@ -1,3 +1,14 @@
+---
+title: SQL Query Builder
+emoji: 🧠
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 8000
+tags:
+  - openenv
+---
+
 # 🧠 SQL Query Builder — OpenEnv Environment
 
 > **Train AI agents to write SQL queries against a realistic company database.**  
