@@ -2,7 +2,7 @@
 
 > **Train AI agents to write SQL queries against a realistic company database.**  
 > Built for the [Meta PyTorch OpenEnv Hackathon 2026](https://www.scaler.com/school-of-technology/meta-pytorch-hackathon) · **Team Rocket** 🚀  
-> 🔗 [GitHub Repository](https://github.com/GauravGadhari/sql-query-env)
+> 🔗 [GitHub Repository](https://github.com/GauravGadhari/SQL-Query-Builder-OpenEnv-Environment)
 
 ---
 
