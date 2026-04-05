@@ -12,8 +12,13 @@ tags:
 # 🧠 SQL Query Builder — OpenEnv Environment
 
 > **Train AI agents to write SQL queries against a realistic company database.**  
-> Built for the [Meta PyTorch OpenEnv Hackathon 2026](https://www.scaler.com/school-of-technology/meta-pytorch-hackathon) · **Team Rocket** 🚀  
-> 🔗 [GitHub Repository](https://github.com/GauravGadhari/SQL-Query-Builder-OpenEnv-Environment)
+> Built for the [Meta PyTorch OpenEnv Hackathon 2026](https://www.scaler.com/school-of-technology/meta-pytorch-hackathon) · **Team Rocket** 🚀
+
+<p align="center">
+  <a href="https://huggingface.co/spaces/GauravGadhari/sql-query-env"><img src="https://img.shields.io/badge/🤗%20HuggingFace-Live%20Demo-yellow?style=for-the-badge" alt="HuggingFace Space"></a>
+  <a href="https://github.com/GauravGadhari/SQL-Query-Builder-OpenEnv-Environment"><img src="https://img.shields.io/badge/GitHub-Source%20Code-181717?style=for-the-badge&logo=github" alt="GitHub Repo"></a>
+  <a href="https://www.scaler.com/school-of-technology/meta-pytorch-hackathon"><img src="https://img.shields.io/badge/Meta-PyTorch%20Hackathon-0467DF?style=for-the-badge&logo=meta" alt="Hackathon"></a>
+</p>
 
 ---
 
