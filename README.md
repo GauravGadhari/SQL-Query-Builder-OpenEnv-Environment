@@ -432,6 +432,14 @@ async with SqlQueryEnv(base_url="http://localhost:8000") as env:
 
 ---
 
+## 📅 Changelog
+
+### v1.0.1 (April 7, 2026) - *Phase 2 Validator Fix*
+- **Fix (Grader):** Clamped all underlying task and step scores strictly to the range `[0.01, 0.99]`. This resolves the Phase 2 Hackathon validation error ("One or more task scores are out of range") which requires scores to be strictly between `0` and `1`.
+- **Fix (Deployment):** Force-enabled the OpenEnv Web Interface (`ENABLE_WEB_INTERFACE=true`) to ensure the interactive Hugging Face Space playground always loads instead of defaulting to a headless API.
+
+---
+
 ## 🏆 Team Rocket
 
 **Meta PyTorch OpenEnv Hackathon 2026**
