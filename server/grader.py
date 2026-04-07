@@ -197,10 +197,17 @@ def _build_result(
     agent_result: List[Dict[str, Any]],
     expected_result: List[Dict[str, Any]],
 ) -> Dict[str, Any]:
-    """Compute weighted reward from breakdown dict."""
+    """Compute weighted reward from breakdown dict.
+
+    The final reward is clamped to the open interval (0, 1) — strictly
+    greater than 0.0 and strictly less than 1.0 — to satisfy the
+    hackathon Phase 2 validator requirement.
+    """
     reward = sum(breakdown[k] * WEIGHTS[k] for k in WEIGHTS)
+    # Clamp to (0, 1) exclusive — validator rejects exactly 0.0 and 1.0
+    reward = max(0.01, min(round(reward, 2), 0.99))
     return {
-        "reward": round(min(reward, 1.0), 2),
+        "reward": reward,
         "breakdown": breakdown,
         "error": error,
         "agent_result": agent_result,

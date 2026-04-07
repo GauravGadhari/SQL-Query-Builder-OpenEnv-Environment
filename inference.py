@@ -344,10 +344,13 @@ async def run_task(task_name: str, env_url: str) -> float:
     except Exception:
         traceback.print_exc(file=sys.stderr)
         if not rewards:
-            rewards = [0.0]
+            rewards = [0.01]
 
     # ── MANDATORY STDOUT ──
-    rewards_str = ",".join(f"{r:.2f}" for r in rewards)
+    # Clamp to (0, 1) exclusive — validator rejects exactly 0.0 and 1.0
+    clamped_rewards = [max(0.01, min(r, 0.99)) for r in rewards]
+    final_score = max(0.01, min(final_score, 0.99))
+    rewards_str = ",".join(f"{r:.2f}" for r in clamped_rewards)
     success_str = "true" if success else "false"
     print(f"[END] success={success_str} steps={steps} score={final_score:.2f} rewards={rewards_str}")
     return final_score
