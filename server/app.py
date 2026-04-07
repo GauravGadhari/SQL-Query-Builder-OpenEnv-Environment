@@ -52,6 +52,11 @@ app = create_app(
     max_concurrent_envs=1,  # increase this number to allow more concurrent WebSocket sessions
 )
 
+@app.get("/")
+def read_root():
+    return {"status": "ok", "message": "SQL Query Env is running on OpenEnv"}
+
+
 
 def main(host: str = "0.0.0.0", port: int = 8000):
     """
