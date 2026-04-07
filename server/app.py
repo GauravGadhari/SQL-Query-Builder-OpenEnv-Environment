@@ -42,6 +42,10 @@ except (ImportError, ModuleNotFoundError):
     from models import SqlQueryAction, SqlQueryObservation
     from server.sql_query_env_environment import SqlQueryEnvironment
 
+import os
+
+# Force the web interface to be enabled on Hugging Face Spaces
+os.environ["ENABLE_WEB_INTERFACE"] = os.getenv("ENABLE_WEB_INTERFACE", "true")
 
 # Create the app with web interface and README integration
 app = create_app(
